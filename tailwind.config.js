@@ -1,11 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}', // Only include the `app` directory if you are using App Router.
-    './components/**/*.{js,ts,jsx,tsx}', // Add only essential directories
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        mono: ["'JetBrains Mono'", "monospace"],
+        display: ["'Space Grotesk'", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
