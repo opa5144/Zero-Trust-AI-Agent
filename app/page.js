@@ -27,7 +27,12 @@ export default function Home() {
   const totalRequests = logs.length;
   const totalBlocked = logs.filter((l) => l.flagged && l.mode === "protected").length;
   const attackAttempts = logs.filter((l) => l.flagged).length;
-  const threatLevel = attackAttempts > 0 ? (totalBlocked === attackAttempts ? "SECURE" : "ELEVATED") : "NORMAL";
+  const lastLog = logs[0];
+  const threatLevel = !lastLog 
+    ? "NORMAL" 
+    : lastLog.flagged 
+      ? (lastLog.mode === "protected" ? "SECURE" : "ELEVATED") 
+      : "NORMAL";
 
   async function sendMessage(customPrompt = null) {
     const promptToSend = customPrompt || message;
