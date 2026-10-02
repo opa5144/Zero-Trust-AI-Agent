@@ -14,7 +14,7 @@ Instead of relying on the model's system prompt to protect itself, this project 
 
 ---
 
-## 🎯 The Core Concept
+## The Core Concept
 
 In an LLM environment, **neither users nor raw prompts can be trusted**. Language models can be manipulated via adversarial inputs into revealing internal system instructions, secret keys, or executing unauthorized actions.
 
@@ -41,7 +41,7 @@ Focuses on blocking three common issues from the OWASP GenAI Top 10:
 
 ---
 
-## 📚 References & Security Resources
+## References & Security Resources
 
 - [OWASP Top 10 for GenAI](https://genai.owasp.org)
 - [PortSwigger Web Security Academy](https://portswigger.net/web-security)
